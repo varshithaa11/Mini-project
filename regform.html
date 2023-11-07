@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign In And Sign Up Form</title>
+<link rel="stylesheet" href="stlye.css">
+<script src="https://kit.fontawesome.com/ddb4757a8b.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+        <h2 id="title">Sign Up</h2>
+        <form>
+            <div class="input-group">    
+                <div class="input-field">                                                                                                                                                                                                                                                                                                                 
+          <i class="fa-solid fa-user"></i>
+           <input type="text" placeholder="Name">
+      </div> 
+
+      <div class="input-field">
+        <i class="fa-regular fa-envelope"></i>
+        <input type="email" placeholder="Email">
+</div>      
+<div class="input-field">
+    <i class="fa-solid fa-lock"></i>
+    <input type="password" placeholder="Password">
+</div>      
+    <p>Lost Password <a href="#">Click Here!</a></p>
+</div>
+    <div class="btn-field">
+        <button type="submit" id="signupbtn">Sign up</button>
+        <button type="submit"id="loginbtn" class="disable">Log in</button>
+    </div>
+     </form>
+    </div>
+  </div>
+  
+  <script>
+
+     let signupbtn = document.getElementById("sigupbtn");
+     let loginbtn = document.getElementById("Log Inbtn");
+     let nameField = document.getElementById("nameFieldbtn");
+     let title = document.getElementById("title");
+
+
+    loginbtn.onclick= function(){
+        nameField.style.maxHeight="0";
+         title.innerHTML="Log In";
+         signupbtn.classList.add("disable");
+         loginbtn.classList.remove("disable");
+    }
+    signupbtn.onclick= function(){
+        nameField.style.maxHeight="60px";
+         title.innerHTML="Sign Up";
+         signupbtn.classList.remove("disable");
+         loginbtn.classList.add("disable");
+    }
+
+
+  </script>
+</body>
+</html>
